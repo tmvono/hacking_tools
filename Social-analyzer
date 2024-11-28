@@ -1,0 +1,91 @@
+Social Analyzer is an open-source tool for OSINT (Open Source Intelligence) that helps gather public information from social media platforms and other websites. Below is a step-by-step guide on how to use it effectively:
+
+Step 1: Install Social Analyzer
+
+	1.	Install Dependencies:
+Ensure you have Python 3.8+ and Git installed on your system.
+	•	Install Python: https://www.python.org/downloads/
+	•	Install Git: https://git-scm.com/
+	2.	Clone the Repository:
+Open your terminal or command prompt and run:
+
+git clone https://github.com/qeeqbox/social-analyzer.git
+cd social-analyzer
+
+
+	3.	Install Required Libraries:
+Use pip to install the necessary dependencies:
+
+pip install -r requirements.txt
+
+======================If your distro doesn't run pip try this =========
+python3 -m venv myenv
+source myenv/bin/activate
+pip install -r requirements.txt
+python my_script.py
+deactivate (deactivate the environment)
+=======================================================================
+
+
+Step 2: Run Social Analyzer
+
+	1.	Basic Command:
+Start the tool using:
+
+python social-analyzer.py
+
+
+	2.	GUI Mode (Optional):
+If you prefer a web-based GUI interface, use:
+
+python social-analyzer.py --web
+
+Open a browser and go to http://127.0.0.1:8000.
+
+Step 3: Use Social Analyzer to Search for Information
+
+	1.	Username Search:
+Search for a username across multiple social media platforms. For example:
+
+python social-analyzer.py --username target_username
+
+This will check various platforms (e.g., Facebook, Instagram, Twitter, LinkedIn) to see if the username exists.
+
+	2.	Email Search:
+If you have an email address, you can search for accounts linked to it:
+
+python social-analyzer.py --email target_email@example.com
+
+
+	3.	Custom Search:
+Search specific platforms for better accuracy:
+
+python social-analyzer.py --username target_username --platform instagram
+
+
+	4.	Output Results:
+Save results to a file using:
+
+python social-analyzer.py --username target_username --output results.json
+
+Step 4: Advanced Features
+
+	1.	API Integration:
+To access more data, you can integrate Social Analyzer with APIs (e.g., Twitter, Instagram). Edit the config.json file to add your API keys.
+	2.	Webhooks:
+Use webhooks to trigger alerts when new data is found.
+
+Step 5: Interpret Results
+
+The tool will output information like:
+	•	Profiles associated with the username.
+	•	Metadata (e.g., follower count, bio, location).
+	•	Links to accounts or posts.
+
+Best Practices
+
+	•	Use this tool ethically and only for authorized purposes.
+	•	Ensure you have permission when gathering data about someone.
+	•	Regularly update the tool (git pull) to keep it compatible with changing platform policies.
+
+Would you like help with a specific command or setup issue?
